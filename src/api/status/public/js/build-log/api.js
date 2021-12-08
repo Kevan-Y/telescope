@@ -1,5 +1,6 @@
 // http://localhost:1111/pages/build.html -> http://localhost:4000/:path
-const autodeploymentUrl = (path) => `//${window.location.hostname}:4000/${path}`;
+// const autodeploymentUrl = (path) => `//${window.location.hostname}:4000/${path}`;
+const autodeploymentUrl = (path) => `//dev.api.telescope.cdot.systems:4000/${path}`;
 
 export const checkBuildStatus = async () => {
   try {
@@ -15,7 +16,10 @@ export const checkBuildStatus = async () => {
     return {
       building: true,
       title: data.type,
+      githubData: data.current.githubData,
       startedAt: new Date(data.current.startedDate),
+      stoppedAt: new Date(data.current.stopDate),
+      result: data.code,
     };
   } catch (err) {
     console.error(err);
