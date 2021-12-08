@@ -167,6 +167,44 @@
         </div>
       </nav>
       <div class="container-fluid py-2">
+        <h6 class="font-weight-bolder mb-0">Build Status</h6>
+        <div id="build-header" class="border rounded p-2 mb-3 bg-white">
+          <h6 id="response-msg" class="mb-0 text-lg text-center">
+            <i class="fa-spin fas fa-hourglass-half px-2"></i>Loading...
+          </h6>
+          <div id="build-header-info" hidden>
+            <div class="row mb-2">
+              <div class="col text-xs">Triggered on <span id="build-started"></span></div>
+              <div class="col col-md-2 text-xs">Result</div>
+              <div class="col col-md-2 text-xs">Total duration</div>
+            </div>
+            <div class="row">
+              <div class="col text-sm">
+                <div class="align-center">
+                  <a id="build-sender" href="#">
+                    <img
+                      class="avatar avatar-xs rounded-circle"
+                      alt="GitHub user's avatar"
+                      src=""
+                      id="build-sender-img"
+                    />
+                    <span id="build-sender-name"></span>
+                  </a>
+                  synchronized
+                  <span><a id="build-git-sha" href="#"></a></span>
+                </div>
+              </div>
+              <div
+                id="build-result"
+                class="col col-md-2 text-dark text-sm font-weight-bolder"
+              ></div>
+              <div
+                id="build-duration"
+                class="col col-md-2 text-dark text-sm font-weight-bolder"
+              ></div>
+            </div>
+          </div>
+        </div>
         <div id="terminal"></div>
       </div>
     </main>
