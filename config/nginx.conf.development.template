@@ -151,6 +151,12 @@ http {
       proxy_pass http://planet:9876;
     }
 
+    location /studio/ {
+      proxy_cache_bypass 1;
+      proxy_set_header Connection "";
+      proxy_pass http://studio:3000/;
+    }
+
     # Static next.js front-end
     location / {
       # Directory from which we serve Next's static content
