@@ -1,10 +1,11 @@
-import { View, Text } from 'react-native';
+import { ScrollView, Text } from 'react-native';
+import Post from '../components/Post';
 
 const HomeScreen = () => {
   return (
-    <View>
-      <Text>Home Screen</Text>
-    </View>
+    <ScrollView>
+      <Post />
+    </ScrollView>
   );
 };
 
